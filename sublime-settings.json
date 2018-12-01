@@ -1,0 +1,34 @@
+{
+    "bold_folder_labels": true,
+    "caret_style": "phase",
+    "close_windows_when_empty": true,
+    "color_scheme": "Packages/Inspired GitHub Color Scheme/InspiredGitHub.tmTheme",
+    "ensure_newline_at_eof_on_save": true,
+    "findreplace_small": true,
+    "folder_exclude_patterns":
+    [
+        ".svn",
+        ".git",
+        ".hg",
+        "CVS",
+        ".idea"
+    ],
+    "font_face": "Operator Mono Book",
+    "font_size": 18,
+    "hot_exit": false,
+    "ignored_packages": [],
+    "line_padding_bottom": 6,
+    "line_padding_top": 6,
+    "open_files_in_new_window": false,
+    "overlay_scroll_bars": "enabled",
+    "phpunit-sublime-terminal": "iTerm",
+    "remember_open_files": true,
+    "save_on_focus_lost": false,
+    "scroll_past_end": true,
+    "show_definitions": false,
+    "show_panel_on_build": false,
+    "theme": "Default.sublime-theme",
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+    "word_wrap": false
+}
