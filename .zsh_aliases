@@ -1,0 +1,39 @@
+# Tail Laravel logs with colors
+alias laralog="tail -f -n 450 storage/logs/laravel*.log | grep -i -E \"^\[\d{4}\-\d{2}\-\d{2} \d{2}:\d{2}:\d{2}\]|Next [\w\W]+?\:\" --color"
+
+# Git log with short & pretty
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+# WIP
+alias wip="git add . && git commit -m 'wip'"
+
+# Rollback everything
+alias nah='git reset --hard;git clean -df'
+
+# Clear
+alias c="clear"
+
+# Yes, It's for Laravel
+alias art='php artisan'
+alias a='php artisan'
+alias tinker='php artisan tinker'
+alias migarte='php artisan migrate'
+alias mfs='php artisan migrate:fresh'
+alias serve='artisan serve'
+
+# Symfony
+alias sf='bin/console'
+
+# Composer
+alias comp='composer'
+
+# PHPUnit
+alias phpunit='vendor/bin/phpunit'
+
+# Copy SSH
+alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+
+# Remove all files .DS_Store
+function rmds() {
+    find . -name '.DS_Store' -type f -delete
+}
