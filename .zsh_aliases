@@ -37,3 +37,6 @@ alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 function rmds() {
     find . -name '.DS_Store' -type f -delete
 }
+
+# Zip Latest Commit Changed Files
+alias galc="git archive -o update.zip HEAD $(git diff --name-only HEAD^)"
