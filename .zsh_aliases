@@ -38,5 +38,11 @@ function rmds() {
     find . -name '.DS_Store' -type f -delete
 }
 
-# Zip Latest Commit Changed Files
-alias galc="git archive -o update.zip HEAD $(git diff --name-only HEAD^)"
+function archive_commits() {
+    git archive -o $1 HEAD $(git diff --name-only $2 HEAD)
+}
+
+alias weather='curl -s wttr.in | sed -n "1,7p"'
+
+alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+

@@ -12,7 +12,7 @@ let mapleader=","                           "The default leader is \, but a comm
 
 colorscheme atom-dark
 set t_CO=256                                "Use 256 colors. This is useful for termial vim.
-set guifont=IBM_Plex_Mono:h16
+set guifont=Cascadia_Code:h16
 set linespace=15                            "Macvim-specific line-height.
 
 set guioptions-=e
@@ -51,11 +51,21 @@ nmap <D-p> :CtrlP<cr>
 nmap <D-r> :CtrlPBufTag<cr>
 nmap <D-e> :CtrlPMRUFiles<cr>
 
+"Quickly browse to any tag/symbol in the project.
+"Tip: run ctags -R to regenerated the index.
+nmap <Leader>f :tag<space>
+
 "-------------Plugins--------------"
 "/
 "/ CtrlP
 "/
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|idea\|vscode\|git'
+
+
+"/
+"/ NERDTree
+"/
+let NERDTreeHijeckNetrw = 0
 
 "----------AutoCmds---------"
 
@@ -65,3 +75,7 @@ augroup autosouring
     autocmd!
     autocmd BufWritePost .vimrc source %
 augroup END
+
+
+"-------------Tips and Reminders--------------"
+" - Press 'zz' to instantly center the line where the cursor is located.

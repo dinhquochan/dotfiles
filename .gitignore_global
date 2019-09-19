@@ -12,6 +12,8 @@
 .vscode
 *.sublime-project
 *.sublime-workspace
+_ide_helper.php
+.phpstorm.meta.php
 
 node_modules
 npm-debug.log
