@@ -102,3 +102,12 @@ source ~/.zsh_aliases
 # Load composer vendor binary
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
+# Load yarn global binary
+export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
+
+# Load flutter binary
+export PATH=$PATH:/Volumes/Storage/developement/flutter/bin
+
+# Update local LC environment
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8

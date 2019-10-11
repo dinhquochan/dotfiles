@@ -4,13 +4,20 @@
 	"close_windows_when_empty": true,
 	"color_scheme": "Packages/Inspired GitHub Color Scheme/InspiredGitHub.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
-	"font_face": "Cascadia Code",
-	"font_size": 17,
+	"folder_exclude_patterns":
+	[
+		".idea",
+		".svn",
+		".git",
+		".hg",
+		"CVS"
+	],
+	"font_face": "Menlo",
+	"font_size": 15,
 	"highlight_line": false,
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Vintage"
 	],
 	"line_numbers": true,
 	"line_padding_bottom": 6,

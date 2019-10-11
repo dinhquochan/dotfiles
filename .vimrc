@@ -7,12 +7,13 @@ syntax enable
 set backspace=indent,eol,start              "Make backspace behave like every other editor.
 set number                                  "Let's activate line numbers.
 let mapleader=","                           "The default leader is \, but a comma is much better.
+set laststatus=2
 
 "----------Visuals----------"
 
-colorscheme atom-dark
+colorscheme nord
 set t_CO=256                                "Use 256 colors. This is useful for termial vim.
-set guifont=Cascadia_Code:h16
+set guifont=SF_Mono_Medium:h15
 set linespace=15                            "Macvim-specific line-height.
 
 set guioptions-=e
@@ -66,6 +67,23 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|idea\|vscode\|git'
 "/ NERDTree
 "/
 let NERDTreeHijeckNetrw = 0
+
+"/
+"/ PHP Namespace
+"/
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
+
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 
 "----------AutoCmds---------"
 
