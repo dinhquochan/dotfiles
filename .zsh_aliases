@@ -42,7 +42,30 @@ function archive_commits() {
     git archive -o $1 HEAD $(git diff --name-only $2 HEAD)
 }
 
+function mkd() {
+   mkdir -p "$@" && cd "$@"
+}
+
 alias weather='curl -s wttr.in | sed -n "1,7p"'
+
+alias mysqladm='mysql -u root'
 
 alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 
+function db {
+    if [ "$1" = "refresh" ]; then
+        mysql -uroot -e "drop database $2; create database $2"
+    elif [ "$1" = "create" ]; then
+        mysql -uroot -e "create database $2"
+    elif [ "$1" = "drop" ]; then
+        mysql -uroot -e "drop database $2"
+    fi
+}
+
+function scheduler () {
+    while :; do
+        php artisan schedule:run
+	echo "Sleeping 60 seconds..."
+        sleep 60
+    done
+}

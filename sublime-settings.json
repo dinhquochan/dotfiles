@@ -2,7 +2,7 @@
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Inspired GitHub Color Scheme/InspiredGitHub.tmTheme",
+	"color_scheme": "Packages/One Dark Color Scheme/One Dark.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
@@ -12,8 +12,8 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "Menlo",
-	"font_size": 15,
+	"font_face": "Cascadia Code",
+	"font_size": 17,
 	"highlight_line": false,
 	"hot_exit": false,
 	"ignored_packages":
