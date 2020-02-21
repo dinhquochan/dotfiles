@@ -13,7 +13,7 @@ set laststatus=2
 
 colorscheme nord
 set t_CO=256                                "Use 256 colors. This is useful for termial vim.
-set guifont=SF_Mono_Medium:h15
+set guifont=Menlo:h17
 set linespace=15                            "Macvim-specific line-height.
 
 set guioptions-=e
@@ -21,6 +21,8 @@ set guioptions-=L
 set guioptions-=l
 set guioptions-=R
 set guioptions-=r
+
+set tabstop=4 shiftwidth=4 expandtab
 
 "----------Searching--------"
 
@@ -84,6 +86,18 @@ function! IPhpExpandClass()
 endfunction
 autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
+
+"/
+"/ PHP CS Fixer
+"/
+let g:php_cs_fixer_rules = "@PSR2"
+let g:php_cs_fixer_config_file = '/Users/handinh/.php_cs'
+let g:php_cs_fixer_php_path = "php"
+let g:php_cs_fixer_enable_default_mapping = 1
+let g:php_cs_fixer_dry_run = 0
+let g:php_cs_fixer_verbose = 0
+
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
 "----------AutoCmds---------"
 

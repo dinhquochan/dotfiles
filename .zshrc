@@ -8,7 +8,7 @@ export ZSH="/Users/handinh/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="" # "robbyrussell"
 
 # Hide username in prompt
 DEFAULT_USER=`whoami`
@@ -102,6 +102,9 @@ source $ZSH/oh-my-zsh.sh
 # Load local aliases
 source ~/.zsh_aliases
 
+# Load sbin env
+export PATH="/usr/local/sbin:$PATH"
+
 # Load composer vendor binary
 export PATH=$HOME/.composer/vendor/bin:$PATH
 
@@ -114,3 +117,9 @@ export PATH=$PATH:/Volumes/Storage/developement/flutter/bin
 # Update local LC environment
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+# ZSH Pure Theme
+autoload -U promptinit; promptinit
+prompt pure
+
+

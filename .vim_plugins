@@ -11,8 +11,12 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'arcticicestudio/nord-vim'
-Plugin 'itchyny/lightline.vim'
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

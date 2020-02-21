@@ -46,11 +46,22 @@ function mkd() {
    mkdir -p "$@" && cd "$@"
 }
 
+function phpv() {
+    valet stop
+    brew unlink php@7.3 php
+    brew link --force --overwrite $1
+    brew services start $1
+    composer global update
+    rm -f ~/.config/valet/valet.sock
+    valet install
+}
+
 alias weather='curl -s wttr.in | sed -n "1,7p"'
 
 alias mysqladm='mysql -u root'
 
-alias mvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+alias macvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+alias vim="/usr/local/bin/vim"
 
 function db {
     if [ "$1" = "refresh" ]; then
@@ -69,3 +80,4 @@ function scheduler () {
         sleep 60
     done
 }
+
