@@ -33,6 +33,10 @@ alias phpunit='vendor/bin/phpunit'
 # Copy SSH
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 
+# ls with lolcat
+alias l='ls | lolcat' 
+alias la='ls -la | lolcat'
+
 # Remove all files .DS_Store
 function rmds() {
     find . -name '.DS_Store' -type f -delete
@@ -80,4 +84,8 @@ function scheduler () {
         sleep 60
     done
 }
+
+# What's the fuck are u doing?
+alias docker-composer="docker-compose"
+
 

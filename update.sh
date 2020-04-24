@@ -19,3 +19,5 @@ cp ~/.gitignore_global .
 echo "Update Sublinme Text settings..."
 cp ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings sublime-settings.json
 
+echo "Update alacritty..."
+cp ~/.config/alacritty/alacritty.ym l.

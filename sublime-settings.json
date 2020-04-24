@@ -2,7 +2,7 @@
 	"bold_folder_labels": true,
 	"caret_style": "phase",
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Inspired GitHub Color Scheme/InspiredGitHub.tmTheme",
+	"color_scheme": "Packages/User/Themes/Dracula Pro.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
@@ -12,25 +12,25 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "Jetbrains Mono",
+	"font_face": "Iosevka Extended",
 	"font_size": 16,
 	"highlight_line": false,
 	"hot_exit": false,
-	"ignored_packages":
-	[
-	],
 	"line_numbers": true,
-	"line_padding_bottom": 10,
-	"line_padding_top": 10,
+	"line_padding_bottom": 4,
+	"line_padding_top": 4,
 	"open_files_in_new_window": false,
 	"overlay_scroll_bars": "enabled",
-	"phpunit-sublime-terminal": "iTerm",
 	"remember_open_files": false,
 	"show_definitions": false,
 	"show_panel_on_build": false,
 	"tab_size": 4,
-	"theme": "Default.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"word_wrap": false
+	"word_wrap": false,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
 }

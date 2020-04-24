@@ -11,10 +11,10 @@ set laststatus=2
 
 "----------Visuals----------"
 
-colorscheme nord
+colorscheme nord 
 set t_CO=256                                "Use 256 colors. This is useful for termial vim.
-set guifont=Menlo:h17
-set linespace=15                            "Macvim-specific line-height.
+set guifont=MonoLisa:h13
+set linespace=5                             "Macvim-specific line-height.
 
 set guioptions-=e
 set guioptions-=L

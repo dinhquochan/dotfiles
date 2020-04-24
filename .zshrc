@@ -8,7 +8,7 @@ export ZSH="/Users/handinh/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="" # "robbyrussell"
+ZSH_THEME="dracula-pro"
 
 # Hide username in prompt
 DEFAULT_USER=`whoami`
@@ -66,7 +66,6 @@ DEFAULT_USER=`whoami`
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -111,15 +110,15 @@ export PATH=$HOME/.composer/vendor/bin:$PATH
 # Load yarn global binary
 export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 
-# Load flutter binary
-export PATH=$PATH:/Volumes/Storage/developement/flutter/bin
-
 # Update local LC environment
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# ZSH Pure Theme
-autoload -U promptinit; promptinit
-prompt pure
+# Enable color output
+export CLICOLOR=1
+export LSCOLORS=gx
+
+# Brew bin paths
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 
