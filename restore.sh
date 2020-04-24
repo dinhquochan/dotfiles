@@ -11,6 +11,7 @@ cp .zsh_aliases ~/
 
 echo "Restore PHPCS settings..."
 cp .phpcs.xml ~/
+cp .php_cs ~/
 
 echo "Restore .gitignore_global..."
 cp .gitignore_global ~/
