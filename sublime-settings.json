@@ -12,7 +12,7 @@
 		".hg",
 		"CVS"
 	],
-	"font_face": "Iosevka Extended",
+	"font_face": "Iosevka Medium",
 	"font_size": 16,
 	"highlight_line": false,
 	"hot_exit": false,
@@ -33,4 +33,5 @@
 	[
 		"Vintage",
 	],
+	"index_exclude_gitignore": false,
 }

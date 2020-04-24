@@ -61,6 +61,7 @@ function phpv() {
 }
 
 alias weather='curl -s wttr.in | sed -n "1,7p"'
+alias corona='~/Code/covid19-cli/covid19-cli tracking'
 
 alias mysqladm='mysql -u root'
 

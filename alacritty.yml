@@ -1,0 +1,67 @@
+# Enviroment
+env:
+  TERM: xterm-256color
+  LC_ALL: en_US.UTF-8
+  LANG: en_US.UTF-8
+
+# Fonts
+font:
+  normal:
+    family: Iosevka Term
+    style: Medium
+  size: 16.0
+  use_thin_strokes: true
+
+# Colors (Dracula Pro)
+colors:
+  # Default colors
+  primary:
+    background: '0x22212C'
+    foreground: '0xf8f8f2'
+
+  # Cursor colors
+  #
+  # Colors which should be used to draw the terminal cursor. If these are unset,
+  # the cursor color will be the inverse of the cell color.
+  cursor:
+    text: '0x44475a'
+    cursor: '0xf8f8f2'
+
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xff9580'
+    green:   '0x8aff80'
+    yellow:  '0xffff80'
+    blue:    '0xbd93f9'
+    magenta: '0xff80bf'
+    cyan:    '0x80ffea'
+    white:   '0xbfbfbf'
+
+  # Bright colors
+  bright:
+    black:   '0x999999'
+    red:     '0xff9580'
+    green:   '0x8aff80'
+    yellow:  '0xffff80'
+    blue:    '0xbd93f9'
+    magenta: '0xff80bf'
+    cyan:    '0x80ffea'
+    white:   '0xffffff'
+
+# Background opacity
+background_opacity: 1
+
+# Shell
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+    - -c
+    - "tmux attach || tmux"
+
+# key binding
+key_bindings:
+  # remove the line below!
+  - { key: W, mods: Command, action: Quit }
+
