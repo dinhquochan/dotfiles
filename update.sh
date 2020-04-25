@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 echo "Update VIM settings..."
-cp ~/.vimrc .
-cp ~/.gvimrc .
-cp ~/.vim/plugins.vim .vim_plugins
+cp ~/.config/nvim/init.vim .vimrc
+
+echo "Update Tmux settings..."
+cp ~/.tmux.conf .tmux.conf
 
 echo "Update ZSH settings..."
 cp ~/.zshrc .

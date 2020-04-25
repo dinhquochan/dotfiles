@@ -37,6 +37,9 @@ alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias l='ls | lolcat' 
 alias la='ls -la | lolcat'
 
+# VIM
+alias vim='/usr/local/bin/nvim'
+
 # Remove all files .DS_Store
 function rmds() {
     find . -name '.DS_Store' -type f -delete
@@ -44,10 +47,6 @@ function rmds() {
 
 function archive_commits() {
     git archive -o $1 HEAD $(git diff --name-only $2 HEAD)
-}
-
-function mkd() {
-   mkdir -p "$@" && cd "$@"
 }
 
 function phpv() {
@@ -61,12 +60,8 @@ function phpv() {
 }
 
 alias weather='curl -s wttr.in | sed -n "1,7p"'
-alias corona='~/Code/covid19-cli/covid19-cli tracking'
 
 alias mysqladm='mysql -u root'
-
-alias macvim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
-alias vim="/usr/local/bin/vim"
 
 function db {
     if [ "$1" = "refresh" ]; then

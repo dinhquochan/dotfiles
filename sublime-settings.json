@@ -6,14 +6,10 @@
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
-		".idea",
-		".svn",
-		".git",
-		".hg",
-		"CVS"
+		".idea"
 	],
 	"font_face": "Iosevka Medium",
-	"font_size": 16,
+	"font_size": 17,
 	"highlight_line": false,
 	"hot_exit": false,
 	"line_numbers": true,
@@ -29,9 +25,6 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false,
-	"ignored_packages":
-	[
-		"Vintage",
-	],
+	"ignored_packages":	[	],
 	"index_exclude_gitignore": false,
 }

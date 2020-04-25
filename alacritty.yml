@@ -4,13 +4,27 @@ env:
   LC_ALL: en_US.UTF-8
   LANG: en_US.UTF-8
 
+# Windows
+window:
+  dimensions:
+    columns: 120
+    lines: 30
+  position:
+    x: 10
+    y: 10
+  decorations: full
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
 # Fonts
 font:
   normal:
     family: Iosevka Term
     style: Medium
-  size: 16.0
-  use_thin_strokes: true
+  size: 17.0
+  use_thin_strokes: false
 
 # Colors (Dracula Pro)
 colors:
@@ -50,7 +64,7 @@ colors:
     white:   '0xffffff'
 
 # Background opacity
-background_opacity: 1
+background_opacity: 0.9
 
 # Shell
 shell:
