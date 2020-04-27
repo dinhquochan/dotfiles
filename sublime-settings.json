@@ -4,10 +4,7 @@
 	"close_windows_when_empty": true,
 	"color_scheme": "Packages/User/Themes/Dracula Pro.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
-	"folder_exclude_patterns":
-	[
-		".idea"
-	],
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".idea", ".vscode"],
 	"font_face": "Iosevka Medium",
 	"font_size": 17,
 	"highlight_line": false,
