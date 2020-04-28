@@ -97,19 +97,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-# Load local aliases
-source ~/.zsh_aliases
-
-# Load sbin env
-export PATH="/usr/local/sbin:$PATH"
-
-# Load composer vendor binary
-export PATH=$HOME/.composer/vendor/bin:$PATH
-
-# Load yarn global binary
-export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
-
 # Update local LC environment
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -118,7 +105,8 @@ export LANG=en_US.UTF-8
 export CLICOLOR=1
 export LSCOLORS=gx
 
-# Brew bin paths
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+# Load local aliases
+source ~/.zsh_aliases
 
-
+# Load local paths
+source ~/.zsh_paths

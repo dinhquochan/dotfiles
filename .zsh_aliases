@@ -37,9 +37,6 @@ alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias l='ls | lolcat' 
 alias la='ls -la | lolcat'
 
-# VIM
-alias vim='/usr/local/bin/nvim'
-
 # Remove all files .DS_Store
 function rmds() {
     find . -name '.DS_Store' -type f -delete
