@@ -31,7 +31,7 @@ alias comp='composer'
 alias phpunit='vendor/bin/phpunit'
 
 # Copy SSH
-alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias copyssh="pbcopy < $HOME/.ssh/id_ed.pub"
 
 # ls with lolcat
 alias l='ls | lolcat' 
@@ -81,4 +81,5 @@ function scheduler () {
 # What's the fuck are u doing?
 alias docker-composer="docker-compose"
 
+alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 
