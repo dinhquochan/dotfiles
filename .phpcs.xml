@@ -2,24 +2,13 @@
 <ruleset name="My Coding Standard">
     <description>My Coding Standard</description>
 
+    <file>autoload.php</file>
     <file>app</file>
     <file>config</file>
     <file>database</file>
-    <file>public</file>
-    <file>resources</file>
     <file>routes</file>
     <file>src</file>
     <file>tests</file>
-
-    <exclude-pattern>*/database/*</exclude-pattern>
-    <exclude-pattern>*/storage/*</exclude-pattern>
-    <exclude-pattern>*/docs/*</exclude-pattern>
-    <exclude-pattern>*/vendor/*</exclude-pattern>
-    <exclude-pattern>*/*.js</exclude-pattern>
-    <exclude-pattern>*/*.css</exclude-pattern>
-    <exclude-pattern>*/*.xml</exclude-pattern>
-    <exclude-pattern>*/*.blade.php</exclude-pattern>
-    <exclude-pattern>*/autoload.php</exclude-pattern>
 
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
         <exclude-pattern>*/config/*</exclude-pattern>
@@ -34,4 +23,3 @@
 
     <rule ref="PSR12" />
 </ruleset>
-

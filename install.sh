@@ -10,39 +10,21 @@ fi
 # Update Homebrew recipes
 brew update
 
-# Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
-brew bundle
-
 # Set default MySQL root password and auth type.
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/valet friendsofphp/php-cs-fixer
+/usr/local/bin/composer global require laravel/installer laravel/valet
 
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
-# Install PHPCS
-curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar
-chmod +x phpcs.phar
-mv phpcs.phar /usr/local/bin/phpcs
-
-
-echo "Restore ZSH settings..."
 cp .zshrc ~/
-cp .zsh_aliases ~/
-cp .zsh_paths ~/
-
-echo "Restore PHPCS settings..."
+cp .vimrc ~/
+cp -r vim ~/.vim
+cp .tmux.conf ~/
 cp .phpcs.xml ~/
-cp .php_cs ~/
-
-echo "Restore .gitignore_global..."
 cp .gitignore_global ~/
 
-echo "Settings macOS..."
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.sublimetext.4 ApplePressAndHoldEnabled -bool false
-
-

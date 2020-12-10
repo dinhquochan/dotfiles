@@ -1,5 +1,12 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# sbin
+export PATH=/usr/local/sbin:$PATH
+
+# Path to composer vendor binary
+export PATH=$HOME/.composer/vendor/bin:$PATH
+
+# Path to yarn global binary
+export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/handinh/.oh-my-zsh"
@@ -8,10 +15,7 @@ export ZSH="/Users/handinh/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
-# Hide username in prompt
-DEFAULT_USER=`whoami`
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -80,14 +84,11 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -101,22 +102,79 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Update local LC environment
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+# bat rules
+alias cat='bat'
 
-# Enable color output
-export CLICOLOR=1
-export LSCOLORS=gx
+# clear
+alias c='clear'
 
-# Load local aliases
-source ~/.zsh_aliases
+## apps
+alias vim='/usr/local/bin/vim'
+alias bash='/usr/local/bin/vim'
+alias git='/usr/local/bin/git'
 
-# Load local paths
-source ~/.zsh_paths
+# editing and reloading bash profile
+alias ezsh='vim ~/.zshrc'
+alias rzsh='source ~/.zshrc'
 
-fpath+=$HOME/.zsh/pure
+# php
+alias a='php artisan'
+alias tinker='php artisan tinker'
+alias migrate='php artisan migrate'
+alias mfs='php artisan migrate:fresh'
+alias serve='php artisan serve'
+alias sf='bin/console'
+alias phpunit='vendor/bin/phpunit'
 
+function scheduler () {
+    while :; do
+        php artisan schedule:run
+	echo "Sleeping 60 seconds..."
+        sleep 60
+    done
+}
+
+function phpv() {
+    valet stop
+    brew unlink php@7.3 php@7.4 php
+    brew link --force --overwrite $1
+    brew services start $1
+    composer global update
+    rm -f ~/.config/valet/valet.sock
+    valet install
+}
+
+# mysql
+alias mysqladm='mysql -u root -ppassword'
+
+function db {
+    if [ "$1" = "refresh" ]; then
+        mysql -uroot -ppassword -e "drop database $2; create database $2"
+    elif [ "$1" = "create" ]; then
+        mysql -uroot -ppassword -e "create database $2"
+    elif [ "$1" = "drop" ]; then
+        mysql -uroot -ppassword -e "drop database $2"
+    fi
+}
+
+# what's the fuck are u doing?
+alias docker-composer="docker-compose"
+
+# utilities
+alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
+alias weather='curl -s wttr.in | sed -n "1,7p"'
+
+function rmds() {
+    find . -name '.DS_Store' -type f -delete
+}
+
+# git
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias wip="git add . && git commit -m 'wip'"
+alias nah='git reset --hard;git clean -df'
+
+# Pure prompt
 autoload -U promptinit; promptinit
 prompt pure
 
