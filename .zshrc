@@ -15,7 +15,10 @@ export ZSH="/Users/handinh/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME=""
+ZSH_THEME="afowler"
+
+# Hide username in prompt
+DEFAULT_USER=`whoami`
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -173,8 +176,3 @@ function rmds() {
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias wip="git add . && git commit -m 'wip'"
 alias nah='git reset --hard;git clean -df'
-
-# Pure prompt
-autoload -U promptinit; promptinit
-prompt pure
-

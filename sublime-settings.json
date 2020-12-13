@@ -15,7 +15,7 @@
 		".vscode"
 	],
 	"font_face": "MonoLisa",
-	"font_size": 20,
+	"font_size": 13,
 	"highlight_line": false,
 	"hot_exit": false,
 	"index_exclude_gitignore": false,
