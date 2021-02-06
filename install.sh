@@ -19,11 +19,12 @@ mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_passwor
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
-cp .zshrc ~/
+cp .bashrc ~/
+cp .bash_profile ~/
 cp .vimrc ~/
-cp -r vim ~/.vim
 cp .tmux.conf ~/
 cp .phpcs.xml ~/
+cp .php_cs ~/
 cp .gitignore_global ~/
 
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false

@@ -1,10 +1,9 @@
-syntax enable
-filetype plugin indent on
+syntax on
 
-set tabstop=2
+set tabstop=4
 set shiftwidth=2
 set expandtab
-set hlsearch 
+set hlsearch
 set ai
 set number
 set noswapfile
@@ -13,4 +12,3 @@ set noshowmode
 set hidden
 
 set backspace=indent,eol,start
-
