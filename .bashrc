@@ -50,10 +50,6 @@ alias ll='ls -lGh'
 alias ebash='vim ~/.bash_profile'
 alias rbash='source ~/.bash_profile'
 
-# editing and reloading bash profile
-alias ezsh='vim ~/.zshrc'
-alias rzsh='source ~/.zshrc'
-
 # php
 alias a='php artisan'
 alias tinker='php artisan tinker'
@@ -112,6 +108,7 @@ alias ga='git add'
 alias gaa='git add --all'
 alias gss='git status -s'
 alias gst='git status'
+alias gp='git push'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias wip="git add . && git commit -m 'wip'"
 alias nah='git reset --hard;git clean -df'

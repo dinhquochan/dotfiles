@@ -15,7 +15,7 @@
 		".vscode"
 	],
 	"font_face": "MonoLisa",
-	"font_size": 13,
+	"font_size": 14,
 	"highlight_line": false,
 	"hot_exit": false,
 	"index_exclude_gitignore": false,
@@ -28,7 +28,7 @@
 	"show_definitions": false,
 	"show_panel_on_build": false,
 	"tab_size": 4,
-	"theme": "Adaptive.sublime-theme",
+	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false,
@@ -36,4 +36,6 @@
 	[
 		"Vintage",
 	],
+	"phpunit-sublime-terminal": "iTerm",
+	"hardware_acceleration": "opengl",
 }
