@@ -1,6 +1,7 @@
+adns
+bash
 composer
 dnsmasq
-ethereum
 ffmpeg
 gh
 git
@@ -17,13 +18,14 @@ msgpack
 mysql
 nginx
 nvm
+openjdk
 php
 php@7.3
-php@7.4
+redis
 subversion
-swagger-codegen
 tmux
 tree
 vim
 wget
+wrk
 youtube-dl

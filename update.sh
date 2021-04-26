@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-cp ~/.zshrc .
+cp ~/.bash_profile .
+cp ~/.bashrc .
 cp ~/.tmux.conf .
 cp ~/.vimrc .
 cp ~/.phpcs.xml .
