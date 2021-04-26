@@ -96,7 +96,7 @@ alias nah='git reset --hard;git clean -df'
 alias gcm='git checkout $(git_main_branch)'
 alias gcd='git checkout develop'
 alias gcs='git checkout staging'
-alias gp='git pull'
+alias gp='git push'
 
 # Paths
 # Path to /usr/local/sbin
