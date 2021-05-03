@@ -1,5 +1,4 @@
 adns
-bash
 composer
 dnsmasq
 ffmpeg
@@ -29,3 +28,4 @@ vim
 wget
 wrk
 youtube-dl
+zsh-syntax-highlighting

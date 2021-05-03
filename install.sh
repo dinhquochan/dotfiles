@@ -19,8 +19,7 @@ mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_passwor
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
-cp .bash_profile ~/
-cp .bashrc ~/
+cp .zshrc ~/
 cp .vimrc ~/
 cp .tmux.conf ~/
 cp .phpcs.xml ~/
