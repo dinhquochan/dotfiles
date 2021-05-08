@@ -13,10 +13,10 @@
 		".idea",
 		".vscode"
 	],
-	"font_face": "Cartograph CF",
-	"font_size": 16,
-	"line_padding_top": 4,
-	"line_padding_bottom": 4,
+	"font_face": "MonoLisa",
+	"font_size": 13,
+	"line_padding_top": 2,
+	"line_padding_bottom": 2,
 	"font_options": ["no_liga"],
 	"highlight_line": false,
 	"hot_exit": false,
@@ -37,6 +37,7 @@
 		"Vintage",
 	],
 	"phpunit-sublime-terminal": "iTerm",
+	"phpunit.composer": true,
 	"hardware_acceleration": "opengl",
 	"color_scheme": "Packages/Color Scheme - Default/Mariana.sublime-color-scheme",
 }
