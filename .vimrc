@@ -10,7 +10,6 @@ set hlsearch
 set ai
 set noswapfile
 set noruler
-set noshowmode
 set hidden
 
 set backspace=indent,eol,start

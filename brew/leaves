@@ -10,12 +10,13 @@ git
 gnupg
 go
 htop
-imagemagick
+ilmbase
 jq
 libtermkey
 libvterm
 luajit
 msgpack
+neofetch
 nginx
 nvm
 openjdk
