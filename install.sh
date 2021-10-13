@@ -19,8 +19,7 @@ $HOME/.composer/vendor/bin/valet install
 cp .bash_profile ~/
 cp .vimrc ~/
 cp .tmux.conf ~/
-cp .phpcs.xml ~/
-cp .php_cs ~/
+cp .php-cs-fixer.php ~/
 cp .gitignore_global ~/
 
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false

@@ -1,7 +1,4 @@
-execute pathogen#infect()
-
 syntax on
-"colorscheme nord
 
 set tabstop=4
 set shiftwidth=2

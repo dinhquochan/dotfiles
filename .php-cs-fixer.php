@@ -30,7 +30,7 @@ return $config->setRules([
         'no_extra_blank_lines' => true,
         'no_leading_namespace_whitespace' => true,
         'no_spaces_around_offset' => true,
-        'no_unused_imports' => true,
+        // 'no_unused_imports' => true,
         'not_operator_with_successor_space' => true,
         'object_operator_without_whitespace' => true,
         'single_quote' => true,
@@ -40,3 +40,4 @@ return $config->setRules([
     ])
     ->setFinder($finder)
 ;
+

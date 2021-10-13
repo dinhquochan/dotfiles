@@ -3,8 +3,7 @@
 cp ~/.bash_profile .
 cp ~/.tmux.conf .
 cp ~/.vimrc .
-cp ~/.phpcs.xml .
-cp ~/.php_cs .
+cp ~/.php-cs-fixer.php .
 cp ~/.gitignore_global .
 cp ~/Library/Mobile\ Documents/com~apple~CloudDocs/Sublime\ Text/User/Preferences.sublime-settings sublime-settings.json
 
