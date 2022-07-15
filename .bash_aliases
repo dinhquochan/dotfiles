@@ -2,14 +2,14 @@
 alias vim='/usr/local/bin/vim'
 alias git='/usr/local/bin/git'
 
-alias ls='ls --color'
-alias lsa='ls -a'
-alias ll='ls -lh'
-alias lla='ll -a'
+alias ls='exa --group-directories-first'
+alias lsa='ls --all'
+alias ll='ls --long --header '
+alias lla='ll --all'
 
 # fast edit zshrc, vimrc
 alias ebash='vim ~/.bashrc'
-alias ebash='source ~/.bashrc'
+alias rbash='source ~/.bashrc'
 alias evim='vim ~/.vimrc'
 alias etmux='vim ~/.tmux.conf'
 
@@ -25,11 +25,17 @@ alias gti='git'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias wip="git add . && git commit -m 'wip'"
 alias nah='git reset --hard;git clean -df'
+alias gp='git push'
+alias gpu='git pull'
+alias gf='git fetch'
+alias gst='git status'
+alias gss='git status -s'
 
 # php
 alias a='php artisan'
 alias tinker='php artisan tinker'
 alias phpunit='vendor/bin/phpunit'
+alias sail='vendor/bin/sail'
 
 function phpv() {
     valet stop
@@ -43,6 +49,8 @@ function phpv() {
 
 # docker
 alias dc='docker compose'
+alias dce='dc exec'
+alias dcr='dc run'
 
 # functions
 function rmds() {
