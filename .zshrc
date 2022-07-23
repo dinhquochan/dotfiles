@@ -1,14 +1,14 @@
-# If you come from bash you might have to change your $PATH.
+# If you come from.zsh you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/handinh/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="bira"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,38 +75,44 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
 export TERM='xterm-256color'
 export DEFAULT_USER=`whoami`
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export EDITOR='vim'
+export EDITOR=vim
+export VISUAL=vim
 
-# Paths
-export PATH=$HOME/bin:$PATH
-export PATH=/usr/local/sbin:$PATH
+# PATHS
+
+export PATH=$HOME/.bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
-export PATH=$HOME/.symfony/bin:$PATH
 
-# Changes defaults
+# Change default
+
 alias vim='/usr/local/bin/vim'
 alias git='/usr/local/bin/git'
 
-# Fast edit zshrc, vimrc
+alias ls='exa --group-directories-first'
+alias lsa='ls --all'
+alias ll='ls --long --header '
+alias lla='ll --all'
+
+# fast edit zshrc, vimrc
 alias ezsh='vim ~/.zshrc'
 alias rzsh='source ~/.zshrc'
 alias evim='vim ~/.vimrc'
 alias etmux='vim ~/.tmux.conf'
 
-# Utilities
+# utilities
 alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias weather='curl -s wttr.in/Ho_Chi_Minh | sed -n "1,7p"'
 alias c='clear'
 
-# Git
-alias g='git'
+# git
 alias gti='git'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias wip="git add . && git commit -m 'wip'"
@@ -115,18 +121,8 @@ alias nah='git reset --hard;git clean -df'
 # php
 alias a='php artisan'
 alias tinker='php artisan tinker'
-alias mfs='php artisan migrate:fresh'
-alias sf='symfony'
-alias sfc='sf console'
 alias phpunit='vendor/bin/phpunit'
-
-function scheduler() {
-    while :; do
-        php artisan schedule:run
-    echo "Sleeping 60 seconds..."
-        sleep 60
-    done
-}
+alias sail='vendor/bin/sail'
 
 function phpv() {
     valet stop
@@ -138,11 +134,19 @@ function phpv() {
     valet install
 }
 
-# Docker
-alias docker-composer='docker-compose'
-alias dcomp='docker-compose'
+# docker
+alias dc='docker compose'
+alias dce='dc exec'
+alias dcr='dc run'
 
-# Functions
+# functions
 function rmds() {
     find . -name '.DS_Store' -type f -delete
 }
+
+# nvm
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+

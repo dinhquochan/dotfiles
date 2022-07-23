@@ -1,7 +1,6 @@
-bash
-bash-completion
 composer
 dnsmasq
+exa
 ffmpeg
 gh
 git
@@ -12,6 +11,7 @@ php-cs-fixer
 redis
 shivammathur/php/php@7.4
 shivammathur/php/php@8.0
+six
 tmux
 tree
 unzip
