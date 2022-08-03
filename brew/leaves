@@ -5,9 +5,11 @@ ffmpeg
 gh
 git
 htop
-mysql
+libfido2
 nginx
 php-cs-fixer
+protobuf
+pure
 redis
 shivammathur/php/php@7.4
 shivammathur/php/php@8.0
@@ -20,3 +22,4 @@ wget
 wrk
 youtube-dl
 zip
+zlib
