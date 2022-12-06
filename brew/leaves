@@ -1,5 +1,3 @@
-bash
-bash-completion
 composer
 dnsmasq
 ffmpeg
@@ -7,11 +5,15 @@ gh
 git
 htop
 jansson
+jpeg
+mysql
 neovim
 nginx
 openjdk
+php-cs-fixer
+php@7.4
+redis
 shivammathur/php/php
-shivammathur/php/php@7.3
 shivammathur/php/php@8.0
 tmux
 tree
@@ -19,4 +21,4 @@ unzip
 wget
 youtube-dl
 zip
-zsh-async
+zsh
