@@ -7,10 +7,10 @@
     "ensure_newline_at_eof_on_save": true,
     "folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", ".Trash", ".Trash-*", ".idea"],
     "color_scheme": "Mariana.sublime-color-scheme",
-    "font_size": 14,
+    "font_size": 13,
     "line_padding_top": 4,
     "line_padding_bottom": 4,
-    "font_face": "MonoLisa",
+    "font_face": "Berkeley Mono",
     "font_options": [
         "no_liga",
     ],
@@ -31,5 +31,4 @@
     [
         "Vintage",
     ],
-    "hardware_acceleration": "opengl",
 }

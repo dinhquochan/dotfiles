@@ -1,3 +1,4 @@
+bash
 composer
 dnsmasq
 ffmpeg
@@ -7,18 +8,19 @@ htop
 jansson
 jpeg
 mysql
+neofetch
 neovim
 nginx
 openjdk
 php-cs-fixer
-php@7.4
 redis
 shivammathur/php/php
+shivammathur/php/php@7.4
 shivammathur/php/php@8.0
+shivammathur/php/php@8.1
 tmux
 tree
 unzip
 wget
 youtube-dl
 zip
-zsh

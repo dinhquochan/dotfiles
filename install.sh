@@ -16,8 +16,7 @@ brew update
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
-cp .zshrc ~/
-cp .vimrc ~/
+cp .bash* ~/
 cp .tmux.conf ~/
 cp .php-cs-fixer.php ~/
 cp .gitignore_global ~/
