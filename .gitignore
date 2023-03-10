@@ -9,6 +9,7 @@
 .*.sw?
 
 .idea
+.fleet
 .vscode
 *.sublime-project
 *.sublime-workspace
