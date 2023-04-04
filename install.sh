@@ -22,8 +22,8 @@ $HOME/.composer/vendor/bin/valet install
 # Ensure ~/.config is exists
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/git
-wget https://github.com/git/git/blob/master/contrib/completion/git-completion.bash -O $HOME/.config/git/git-completion.bash
-wget https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh -O $HOME/.config/git/git-prompt.sh
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O $HOME/.config/git/git-completion.bash
+wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O $HOME/.config/git/git-prompt.sh
 
 cp .bash* $HOME
 cp .tmux.conf $HOME
