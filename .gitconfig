@@ -1,20 +1,17 @@
 [user]
 	name = Dinh Quoc Han
 	email = dqh@dinhquochan.com
+	signingkey = 27AD446220A50DCA
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/handinh/.gitignore
 	editor = nvim
 	ignorecase = false
+	autocrlf = input
 [init]
 	defaultBranch = main
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [commit]
 	template = /Users/handinh/.stCommitMsg
+	gpgsign = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -22,3 +19,9 @@
 	required = true
 [github]
 	user = dinhquochan
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 cp -r ~/.config/nvim .config
-cp ~/.zshrc .
+cp ~/.bash_profile .
+cp ~/.bashrc .
+cp ~/.bash_aliases .
 cp ~/.tmux.conf .
 cp ~/.gitignore .
 cp ~/.gitconfig .
