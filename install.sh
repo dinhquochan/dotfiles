@@ -21,16 +21,14 @@ $HOME/.composer/vendor/bin/valet install
 
 # Ensure ~/.config is exists
 mkdir -p $HOME/.config
-mkdir -p $HOME/.config/git
-wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O $HOME/.config/git/git-completion.bash
-wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O $HOME/.config/git/git-prompt.sh
+mkdir -p $HOME/.config/tmux
 
-cp .bash* $HOME
-cp .tmux.conf $HOME
+cp .zshrc $HOME
 cp .php-cs-fixer.php $HOME
 cp .gitignore $HOME
 cp .gitconfig $HOME
 cp -r .config/nvim $HOME/.config
+cp .config/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
 
 # For vim mode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false

@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
+mkdir -p .config/nvim
+mkdir -p .config/tmux
+
 cp -r ~/.config/nvim .config
-cp ~/.bash_profile .
-cp ~/.bashrc .
-cp ~/.bash_aliases .
-cp ~/.tmux.conf .
+cp ~/.config/tmux/tmux.conf .config/tmux/tmux.conf
+cp ~/.zshrc .
 cp ~/.gitignore .
 cp ~/.gitconfig .
 cp ~/.php-cs-fixer.php .

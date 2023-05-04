@@ -1,3 +1,5 @@
+cmatrix
+cmocka
 composer
 dnsmasq
 ffmpeg
@@ -17,17 +19,17 @@ neovim
 nginx
 openjdk
 php-cs-fixer
-pure
+php@8.1
+pinentry-mac
 redis
-shivammathur/php/php
-shivammathur/php/php@7.4
 shivammathur/php/php@8.0
-shivammathur/php/php@8.1
 tmux
 tree
 unzip
 wget
 woff2
+wrk
 youtube-dl
 zip
 zsh
+zsh-async
