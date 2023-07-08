@@ -24,6 +24,7 @@ mkdir -p $HOME/.config
 mkdir -p $HOME/.config/tmux
 
 cp .zshrc $HOME
+cp handinh.zsh-theme $HOME/.oh-my-zsh/custom/themes/handinh.zsh-theme
 cp .php-cs-fixer.php $HOME
 cp .gitignore $HOME
 cp .gitconfig $HOME
