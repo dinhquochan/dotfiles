@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="bira"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -88,8 +88,7 @@ export EDITOR=vim
 
 # PATHs
 
-export PATH="$PATH:$HOME/.composer/vender/bin"
-export PATH="$PATH:$HOME/.composer/vender/bin"
+export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$PATH:$HOME/Developer/flutter/bin"
 
 # Aliases
