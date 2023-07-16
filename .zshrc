@@ -93,7 +93,7 @@ export PATH="$PATH:$HOME/Developer/flutter/bin"
 
 # Aliases
 
-alias vim='/opt/homebrew/bin/nvim'
+alias vim='/opt/homebrew/bin/vim'
 alias git='/opt/homebrew/bin/git'
 
 alias ezsh="vim $HOME/.zshrc"
