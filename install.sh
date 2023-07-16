@@ -11,7 +11,7 @@ fi
 
 # Update Homebrew recipes
 brew update
-brew install bash git tmux wget curl
+brew install zsl vim git tmux wget curl
 
 # Install global Composer packages
 composer global require laravel/installer laravel/valet
