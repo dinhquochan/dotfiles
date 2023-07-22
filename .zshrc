@@ -88,6 +88,7 @@ export EDITOR=vim
 
 # PATHs
 
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$PATH:$HOME/Developer/flutter/bin"
 
@@ -137,3 +138,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Starship
+
+eval "$(starship init zsh)"
