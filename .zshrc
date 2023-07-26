@@ -101,7 +101,10 @@ alias ezsh="vim $HOME/.zshrc"
 alias rzsh="source $HOME/.zshrc"
 alias etmux="vim $HOME/.tmux.conf"
 
-alias lla='ll -a'
+alias ls='exa'
+alias ll='ls --long'
+alias la='ls --all'
+alias lla='la --long'
 
 alias reloaddns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519_2023.pub"

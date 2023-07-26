@@ -12,6 +12,7 @@ fi
 # Update Homebrew recipes
 brew update
 brew install zsl vim git tmux wget curl
+brew install exa starship
 
 # Install global Composer packages
 composer global require laravel/installer laravel/valet
@@ -24,12 +25,12 @@ mkdir -p $HOME/.config
 mkdir -p $HOME/.config/tmux
 
 cp .zshrc $HOME
-cp handinh.zsh-theme $HOME/.oh-my-zsh/custom/themes/handinh.zsh-theme
 cp .php-cs-fixer.php $HOME
 cp .gitignore $HOME
 cp .gitconfig $HOME
 cp -r .config/nvim $HOME/.config
 cp .config/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
+cp -r .config/alacritty $HOME/.config
 
 # For vim mode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
