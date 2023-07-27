@@ -11,8 +11,10 @@ fi
 
 # Update Homebrew recipes
 brew update
-brew install zsl vim git tmux wget curl
-brew install exa starship
+brew install zsh vim git tmux wget curl
+
+sudo echo /opt/homebrew/bin/zsh >> /etc/shells
+chsh -s /opt/homebrew/bin/zsh
 
 # Install global Composer packages
 composer global require laravel/installer laravel/valet
@@ -20,17 +22,23 @@ composer global require laravel/installer laravel/valet
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
+nvm install --lts
+
 # Ensure ~/.config is exists
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/tmux
+mkdir -p $HOME/.config/alacritty
 
+cp .config/starship.toml $HOME/.config/starship.toml
 cp .zshrc $HOME
 cp .php-cs-fixer.php $HOME
 cp .gitignore $HOME
 cp .gitconfig $HOME
 cp -r .config/nvim $HOME/.config
 cp .config/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
-cp -r .config/alacritty $HOME/.config
+cp .config/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
 # For vim mode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false

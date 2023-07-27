@@ -3,7 +3,7 @@
 	email = dqh@dinhquochan.com
 [core]
 	excludesfile = /Users/handinh/.gitignore
-	editor = vim
+	editor = nvim
 	ignorecase = false
 	autocrlf = input
 [init]

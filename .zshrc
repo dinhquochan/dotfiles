@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="handinh"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -102,9 +102,11 @@ alias rzsh="source $HOME/.zshrc"
 alias etmux="vim $HOME/.tmux.conf"
 
 alias ls='exa'
-alias ll='ls --long'
-alias la='ls --all'
-alias lla='la --long'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='la -l'
+
+alias start='tmux new-session -DAs main'
 
 alias reloaddns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519_2023.pub"
