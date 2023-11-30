@@ -15,6 +15,9 @@ export PS1='\u@\h:\[\e[33m\]\w\[\e[0m\]\$ '
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
+# Brew
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Bash Completion
 
@@ -59,6 +62,7 @@ alias gsw='git switch'
 __git_complete gsw _git_switch
 alias wip="git add . && git commit -m 'wip'"
 alias nah='git reset --hard; git clean -df'
+alias gst='git status'
 
 alias art='php artisan'
 alias tinker='art tinker'
@@ -74,10 +78,6 @@ alias dcr='dc run'
 function rmds() {
     find . -name '.DS_Store' -type f -delete
 }
-
-# Brew
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Node Version Management
 
