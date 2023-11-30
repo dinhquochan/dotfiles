@@ -54,7 +54,7 @@ __git_complete gpl _git_pull
 alias gco='git checkout'
 __git_complete gco _git_checkout
 alias gbr='git branch'
-__git_complete gbr _git_brach
+__git_complete gbr _git_branch
 alias gsw='git switch'
 __git_complete gsw _git_switch
 alias wip="git add . && git commit -m 'wip'"
