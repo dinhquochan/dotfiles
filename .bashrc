@@ -15,14 +15,19 @@ export PS1='\u@\h:\[\e[33m\]\w\[\e[0m\]\$ '
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
+
+# Bash Completion
+
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
 # Aliases
 
 alias vim='/opt/homebrew/bin/vim'
 alias git='/opt/homebrew/bin/git'
 
-alias ezsh="vim $HOME/.zshrc"
-alias rzsh="source $HOME/.zshrc"
-alias etmux="vim $HOME/.co.tmux.conf"
+alias ebash="vim $HOME/.bashrc"
+alias rbash="source $HOME/.bashrc"
+alias etmux="vim $HOME/.config/tmux/tmux.conf"
 
 alias ls='ls --color'
 alias ll='ls -l'
@@ -38,16 +43,22 @@ alias weather='curl -s wttr.in/Ho_Chi_Minh | sed -n "1,7p"'
 alias c='clear'
 
 alias g='git'
+__git_complete g __git_main
 alias gti='git'
+__git_complete gti __git_main
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gp='git push'
+__git_complete gp _git_push
 alias gpl='git pull'
+__git_complete gpl _git_pull
 alias gco='git checkout'
-alias gcb='git checkout -b'
+__git_complete gco _git_checkout
 alias gbr='git branch'
-alias gbrd='git branch -d'
+__git_complete gbr _git_brach
+alias gsw='git switch'
+__git_complete gsw _git_switch
 alias wip="git add . && git commit -m 'wip'"
-alias nah='git reset --hard;git clean -df'
+alias nah='git reset --hard; git clean -df'
 
 alias art='php artisan'
 alias tinker='art tinker'
@@ -73,3 +84,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Git completion
+[[ -r "$HOME/.config/git-completion.bash" ]] && . "$HOME/.config/git-completion.bash"
+
+# Bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

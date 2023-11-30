@@ -27,6 +27,9 @@ nvm install --lts
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/tmux
 
+# Git completion
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.config/git-completion.bash
+
 cp .bashrc $HOME
 cp .bash_profile $HOME
 cp .gitignore $HOME
@@ -38,3 +41,7 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.sublimetext.4 ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.phpstorm ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.webstorm ApplePressAndHoldEnabled -bool false
+
+# Bun install
+
+curl -fsSL https://bun.sh/install | bash # for macOS, Linux, and WSL
