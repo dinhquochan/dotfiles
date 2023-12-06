@@ -1,93 +1,66 @@
-# Default variables
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
+# set term and default user.
 export TERM='xterm-256color'
 export DEFAULT_USER=`whoami`
 
+# set default language.
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# user variables.
 export CLICOLOR=1
 export EDITOR=vim
-export PS1='\u@\h:\[\e[33m\]\w\[\e[0m\]\$ '
 
-# PATHs
-
+# paths.
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
-# Brew
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
 
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+# macOS
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Bash Completion
-
+# bash completion.
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
-# Aliases
-
-alias vim='/opt/homebrew/bin/vim'
-alias git='/opt/homebrew/bin/git'
-
-alias ebash="vim $HOME/.bashrc"
-alias rbash="source $HOME/.bashrc"
-alias etmux="vim $HOME/.config/tmux/tmux.conf"
-
-alias ls='ls --color'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='la -l'
-
-alias start='tmux new-session -DAs main'
-
-alias reloaddns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
-alias copyssh="pbcopy < $HOME/.ssh/id_ed25519_2023.pub"
-alias weather='curl -s wttr.in/Ho_Chi_Minh | sed -n "1,7p"'
-
-alias c='clear'
-
-alias g='git'
-__git_complete g __git_main
-alias gti='git'
-__git_complete gti __git_main
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gp='git push'
-__git_complete gp _git_push
-alias gpl='git pull'
-__git_complete gpl _git_pull
-alias gco='git checkout'
-__git_complete gco _git_checkout
-alias gbr='git branch'
-__git_complete gbr _git_branch
-alias gsw='git switch'
-__git_complete gsw _git_switch
-alias wip="git add . && git commit -m 'wip'"
-alias nah='git reset --hard; git clean -df'
-alias gst='git status'
-
-alias art='php artisan'
-alias tinker='art tinker'
-alias phpunit='vendor/bin/phpunit'
-alias sail='vendor/bin/sail'
-alias pint='vendor/bin/pint'
-alias phpstan='vendor/bin/phpstan'
-
-alias dc='docker compose'
-alias dce='dc exec'
-alias dcr='dc run'
-
-function rmds() {
-    find . -name '.DS_Store' -type f -delete
-}
-
-# Node Version Management
-
+# nvm.
 export NVM_DIR="$HOME/.nvm"
-
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Git completion
+# git.
 [[ -r "$HOME/.config/git-completion.bash" ]] && . "$HOME/.config/git-completion.bash"
 
-# Bun
+# bun.
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# alias
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
