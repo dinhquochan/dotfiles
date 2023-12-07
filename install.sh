@@ -32,6 +32,7 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 
 cp .bashrc $HOME
 cp .bash_profile $HOME
+cp .bash_aliases $HOME
 cp .gitignore $HOME
 cp .gitconfig $HOME
 cp .config/tmux/tmux.conf $HOME/.config/tmux/tmux.conf

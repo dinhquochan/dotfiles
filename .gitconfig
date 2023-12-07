@@ -3,13 +3,11 @@
 	email = dqh@dinhquochan.com
 [core]
 	excludesfile = /Users/handinh/.gitignore
-	editor = nvim
+	editor = vim
 	ignorecase = false
 	autocrlf = input
 [init]
 	defaultBranch = main
-[commit]
-	template = /Users/handinh/.stCommitMsg
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
