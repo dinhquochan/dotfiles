@@ -35,13 +35,6 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-
 # macOS
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -55,6 +48,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # git.
 [[ -r "$HOME/.config/git-completion.bash" ]] && . "$HOME/.config/git-completion.bash"
+[[ -r "$HOME/.config/git-prompt.sh" ]] && . "$HOME/.config/git-prompt.sh"
+
+# ps1
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1=' \[\e[0;36m\]\W \[\033[0;35m\]$(__git_ps1 "(%s) ")\[\e[0m\]>  '
 
 # bun.
 export BUN_INSTALL="$HOME/.bun"

@@ -7,8 +7,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# alias vim='/opt/homebrew/bin/vim'
-# alias git='/opt/homebrew/bin/git'
+alias vim='/opt/homebrew/bin/vim'
+alias git='/opt/homebrew/bin/git'
 
 alias ebash="vim $HOME/.bashrc"
 alias rbash="source $HOME/.bashrc"

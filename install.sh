@@ -16,9 +16,6 @@ brew install bash vim git tmux wget curl
 sudo echo /opt/homebrew/bin/bash >> /etc/shells
 chsh -s /opt/homebrew/bin/bash
 
-# Install global Composer packages
-composer global require laravel/installer
-
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
 nvm install --lts
@@ -29,6 +26,7 @@ mkdir -p $HOME/.config/tmux
 
 # Git completion
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.config/git-completion.bash
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.config/git-prompt.sh
 
 cp .bashrc $HOME
 cp .bash_profile $HOME
