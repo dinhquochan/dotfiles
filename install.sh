@@ -11,10 +11,13 @@ fi
 
 # Update Homebrew recipes
 brew update
-brew install bash vim git tmux wget curl
+brew install zsh vim git tmux wget curl
 
-sudo echo /opt/homebrew/bin/bash >> /etc/shells
-chsh -s /opt/homebrew/bin/bash
+sudo echo /opt/homebrew/bin/zsh >> /etc/shells
+chsh -s /opt/homebrew/bin/zsh
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
@@ -24,13 +27,7 @@ nvm install --lts
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/tmux
 
-# Git completion
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.config/git-completion.bash
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.config/git-prompt.sh
-
-cp .bashrc $HOME
-cp .bash_profile $HOME
-cp .bash_aliases $HOME
+cp .zshrc $HOME
 cp .gitignore $HOME
 cp .gitconfig $HOME
 cp .config/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
@@ -42,5 +39,4 @@ defaults write com.jetbrains.phpstorm ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.webstorm ApplePressAndHoldEnabled -bool false
 
 # Bun install
-
 curl -fsSL https://bun.sh/install | bash # for macOS, Linux, and WSL

@@ -1,17 +1,31 @@
-alias ls='ls --color=auto'
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='la -l'
+export ZSH="$HOME/.oh-my-zsh"
 
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
+ZSH_THEME="robbyrussell"
 
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# Set term and default user
+export TERM='xterm-256color'
+export DEFAULT_USER=`whoami`
+
+# Set default language.
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# User variables
+export CLICOLOR=1
+export EDITOR=vim
+
+# Aliases
 alias vim='/opt/homebrew/bin/vim'
 alias git='/opt/homebrew/bin/git'
 
-alias ebash="vim $HOME/.bashrc"
-alias rbash="source $HOME/.bashrc"
+alias ezsh="vim $HOME/.zshrc"
+alias rzsh="source $HOME/.zshrc"
 alias etmux="vim $HOME/.config/tmux/tmux.conf"
 
 alias start='tmux new-session -DAs main'
@@ -22,25 +36,10 @@ alias weather='curl -s wttr.in/Ho_Chi_Minh | sed -n "1,7p"'
 
 alias c='clear'
 
-alias g='git'
-__git_complete g __git_main
 alias gti='git'
-__git_complete gti __git_main
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gp='git push'
-__git_complete gp _git_push
-alias gpl='git pull'
-__git_complete gpl _git_pull
-alias gco='git checkout'
-__git_complete gco _git_checkout
-alias gbr='git branch'
-__git_complete gbr _git_branch
-alias gsw='git switch'
-__git_complete gsw _git_switch
 alias wip="git add . && git commit -m 'wip'"
 alias nah='git reset --hard; git clean -df'
-alias gst='git status'
-__git_complete gst _git_status
 
 alias art='php artisan'
 alias tinker='art tinker'
@@ -56,3 +55,11 @@ alias dcr='dc run'
 function rmds() {
     find . -name '.DS_Store' -type f -delete
 }
+
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+

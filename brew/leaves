@@ -1,6 +1,6 @@
-bash-completion@2
 cmatrix
 cmocka
+dnsmasq
 ffmpeg
 gh
 git
@@ -11,7 +11,6 @@ jansson
 jpeg
 jq
 libffi
-libfido2
 libgit2
 libspiro
 libtermkey
@@ -20,15 +19,15 @@ libvterm
 luajit
 luv
 msgpack
+mysql
 neofetch
+nginx
 openjdk
-pcre
 pinentry-mac
 protobuf
-protobuf@21
 python@3.11
+redis
 shivammathur/php/php
-shivammathur/php/php@8.0
 shivammathur/php/php@8.1
 telnet
 tmux
@@ -41,5 +40,5 @@ woff2
 wrk
 youtube-dl
 zip
-zlib
+zsh
 zsh-async
