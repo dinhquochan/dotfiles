@@ -27,11 +27,6 @@ export PATH=$PATH:$HOME/.composer/vendor/bin
 alias vim='/opt/homebrew/bin/vim'
 alias git='/opt/homebrew/bin/git'
 
-alias ls="eza"
-alias ll="ls -l"
-alias la="ls -a"
-alias lla="ll -a"
-
 alias ezsh="vim $HOME/.zshrc"
 alias rzsh="source $HOME/.zshrc"
 alias etmux="vim $HOME/.config/tmux/tmux.conf"
@@ -70,13 +65,3 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-
-# Starship
-eval "$(starship init zsh)"
-# bun completions
-[ -s "/Users/handinh/.bun/_bun" ] && source "/Users/handinh/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"

@@ -26,9 +26,11 @@ nvm install --lts
 # Ensure ~/.config is exists
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/tmux
+mkdir -p $HOME/.config/git
 
 cp .zshrc $HOME
-cp .gitignore $HOME
+cp .config/git/ignore $HOME/.config/git/ignore
+cp .config/git/message $HOME/.config/git/message
 cp .gitconfig $HOME
 cp .config/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
 

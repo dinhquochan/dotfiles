@@ -1,17 +1,14 @@
 [user]
 	name = Dinh Quoc Han
-	email = dqh@dinhquochan.com
+	email = dinhquochan@users.noreply.github.com
 [core]
-	excludesfile = /Users/handinh/.gitignore
+	excludesfile = /Users/handinh/.config/git/ignore
 	editor = vim
 	ignorecase = false
 	autocrlf = input
+[commit]
+	template = /Users/handinh/.config/git/message
 [init]
 	defaultBranch = main
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
 [github]
 	user = dinhquochan
