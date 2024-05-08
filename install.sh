@@ -11,13 +11,10 @@ fi
 
 # Update Homebrew recipes
 brew update
-brew install zsh vim git tmux wget curl
+brew install bash vim git tmux wget curl
 
-sudo echo /opt/homebrew/bin/zsh >> /etc/shells
-chsh -s /opt/homebrew/bin/zsh
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo echo /opt/homebrew/bin/bash >> /etc/shells
+chsh -s /opt/homebrew/bin/bash
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
@@ -28,7 +25,8 @@ mkdir -p $HOME/.config
 mkdir -p $HOME/.config/tmux
 mkdir -p $HOME/.config/git
 
-cp .zshrc $HOME
+cp .bashrc $HOME
+cp .bash_profile $HOME
 cp .config/git/ignore $HOME/.config/git/ignore
 cp .config/git/message $HOME/.config/git/message
 cp .gitconfig $HOME

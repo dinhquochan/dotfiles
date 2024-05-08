@@ -1,29 +1,28 @@
-export ZSH="$HOME/.oh-my-zsh"
+# Default variables
 
-ZSH_THEME="robbyrussell"
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# Set term and default user
 export TERM='xterm-256color'
 export DEFAULT_USER=`whoami`
 
-# Set default language.
+# Set default language
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # User variables
+
 export CLICOLOR=1
 export EDITOR=vim
 
-# PATHs
-export PATH=$PATH:$HOME/.composer/vendor/bin
+# Default PS1
+
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 # Aliases
+
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+
 alias vim='/opt/homebrew/bin/vim'
 alias git='/opt/homebrew/bin/git'
 
@@ -34,11 +33,12 @@ alias etmux="vim $HOME/.config/tmux/tmux.conf"
 alias start='tmux new-session -DAs main'
 
 alias reloaddns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
-alias copyssh="pbcopy < $HOME/.ssh/id_ed25519_2023.pub"
+alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias weather='curl -s wttr.in/Ho_Chi_Minh | sed -n "1,7p"'
 
 alias c='clear'
 
+alias g='git'
 alias gti='git'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias wip="git add . && git commit -m 'wip'"
@@ -60,8 +60,12 @@ function rmds() {
 }
 
 # Homebrew
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Node Version Manager
+
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
