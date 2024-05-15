@@ -1,3 +1,17 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# PATHs
+
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
 # Default variables
 
 export TERM='xterm-256color'
@@ -13,18 +27,7 @@ export LANG=en_US.UTF-8
 export CLICOLOR=1
 export EDITOR=vim
 
-# Default PS1
-
-export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-
 # Aliases
-
-alias ll='ls -l'
-alias la='ls -a'
-alias lla='ls -la'
-
-alias vim='/opt/homebrew/bin/vim'
-alias git='/opt/homebrew/bin/git'
 
 alias ezsh="vim $HOME/.zshrc"
 alias rzsh="source $HOME/.zshrc"
@@ -68,4 +71,3 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
