@@ -1,6 +1,7 @@
 [user]
 	name = Dinh Quoc Han
-	email = dinhquochan@users.noreply.github.com
+	email = dqh@dinhquochan.com
+	signingkey = A8047D88AA07D798
 [core]
 	excludesfile = /Users/handinh/.config/git/ignore
 	editor = vim

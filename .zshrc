@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 # PATHs
 
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH=/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH
 
 # Default variables
 
