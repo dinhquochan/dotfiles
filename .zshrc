@@ -1,35 +1,19 @@
-export ZSH="$HOME/.oh-my-zsh"
-
-ZSH_THEME="robbyrussell"
-
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# PATHs
-
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-export PATH=/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH
-
-# Default variables
-
+# Default variable 
 export TERM='xterm-256color'
 export DEFAULT_USER=`whoami`
-
-# Set default language
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# User variables
+WARP_THEMES_DIR="$HOME/.warp/themes"
 
-export CLICOLOR=1
-export EDITOR=vim
+# Paths
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+export PATH=/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH
+
+# Default prompt
+PS1="%n@%m %1~ %# "
 
 # Aliases
-
 alias ezsh="vim $HOME/.zshrc"
 alias rzsh="source $HOME/.zshrc"
 alias etmux="vim $HOME/.config/tmux/tmux.conf"
@@ -63,12 +47,14 @@ function rmds() {
     find . -name '.DS_Store' -type f -delete
 }
 
-# Homebrew
+# Useful support for interacting with Terminal.app or other terminal programs
+[ -r "/etc/zshrc_$TERM_PROGRAM" ] && . "/etc/zshrc_$TERM_PROGRAM"
 
+# Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Node Version Manager
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
