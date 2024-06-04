@@ -1,3 +1,12 @@
+export ZSH="$HOME/.oh-my-zsh"
+# Oh my zsh
+ZSH_THEME="robbyrussell"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+
 # Default variable 
 export TERM='xterm-256color'
 export DEFAULT_USER=`whoami`
@@ -57,4 +66,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Starship
+eval "$(starship init zsh)"
 
