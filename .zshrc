@@ -19,10 +19,10 @@ WARP_THEMES_DIR="$HOME/.warp/themes"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH
 
-# Default prompt
-PS1="%n@%m %1~ %# "
-
 # Aliases
+alias ls="eza"
+alias ll="eza -l"
+alias la="ll -a"
 alias ezsh="vim $HOME/.zshrc"
 alias rzsh="source $HOME/.zshrc"
 alias etmux="vim $HOME/.config/tmux/tmux.conf"
@@ -66,7 +66,4 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Starship
-eval "$(starship init zsh)"
 
