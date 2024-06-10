@@ -9,6 +9,11 @@ if test ! $(which brew); then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# Brew bundle
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+brew bundle
+
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
 nvm install --lts
