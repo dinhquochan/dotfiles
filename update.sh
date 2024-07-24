@@ -8,5 +8,5 @@ cp ~/.config/git/ignore .config/git/ignore
 cp ~/.config/git/message .config/git/message
 cp ~/.gitconfig .
 
-brew bundle dump --force 
+brew bundle dump --force
 

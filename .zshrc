@@ -6,7 +6,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-
 # Default variable 
 export TERM='xterm-256color'
 export DEFAULT_USER=`whoami`
@@ -20,9 +19,6 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH
 
 # Aliases
-alias ls="eza"
-alias ll="eza -l"
-alias la="ll -a"
 alias ezsh="vim $HOME/.zshrc"
 alias rzsh="source $HOME/.zshrc"
 alias etmux="vim $HOME/.config/tmux/tmux.conf"
