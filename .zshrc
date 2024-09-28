@@ -12,8 +12,6 @@ export DEFAULT_USER=`whoami`
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-WARP_THEMES_DIR="$HOME/.warp/themes"
-
 # Paths
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH=/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH
@@ -22,6 +20,10 @@ export PATH=/Users/Shared/DBngin/mysql/8.0.33/bin:$PATH
 alias ezsh="vim $HOME/.zshrc"
 alias rzsh="source $HOME/.zshrc"
 alias etmux="vim $HOME/.config/tmux/tmux.conf"
+
+alias ls='eza'
+alias la='ll -a'
+alias ll='ls --long'
 
 alias start='tmux new-session -DAs main'
 
@@ -62,4 +64,14 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Herd injected PHP binary.
+export PATH="/Users/tee/Library/Application Support/Herd/bin/":$PATH
+
+# Herd injected PHP 8.1 configuration.
+export HERD_PHP_81_INI_SCAN_DIR="/Users/tee/Library/Application Support/Herd/config/php/81/"
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/tee/Library/Application Support/Herd/config/php/83/"
 
