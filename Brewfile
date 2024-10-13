@@ -14,11 +14,16 @@ brew "mas"
 brew "neofetch"
 brew "pinentry-mac"
 brew "pngquant"
+brew "powerlevel10k"
 brew "tmux"
 brew "tree"
 brew "tree-sitter"
 brew "wget"
 brew "wrk"
+brew "zoxide"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
 cask "1password"
 cask "adguard"
 cask "affinity-designer"
@@ -33,6 +38,7 @@ cask "dbngin"
 cask "devutils"
 cask "docker"
 cask "figma"
+cask "firefox"
 cask "font-aileron"
 cask "font-be-vietnam-pro"
 cask "font-cascadia-code"
@@ -40,13 +46,12 @@ cask "font-fira-code"
 cask "font-hack"
 cask "font-inter"
 cask "font-jetbrains-mono"
-cask "github"
 cask "google-chrome"
 cask "gpg-suite"
 cask "herd"
 cask "insomnia"
-cask "iterm2"
 cask "jetbrains-toolbox"
+cask "kitty"
 cask "lm-studio"
 cask "miniconda"
 cask "notion"
@@ -60,26 +65,12 @@ cask "spotify"
 cask "sublime-text"
 cask "tableplus"
 cask "telegram"
+cask "thunderbird"
 cask "visual-studio-code"
 cask "vlc"
 cask "warp"
 cask "zed"
 cask "zoom"
-mas "Amphetamine", id: 937984704
-mas "Bear", id: 1091189122
-mas "DaVinci Resolve", id: 571213070
-mas "HP Smart", id: 1474276998
-mas "Keynote", id: 409183694
-mas "Magnet", id: 441258766
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft Outlook", id: 985367838
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Termius", id: 1176074088
-mas "The Unarchiver", id: 425424353
-mas "Things", id: 904280696
 vscode "bmewburn.vscode-intelephense-client"
 vscode "bradlc.vscode-tailwindcss"
 vscode "caponetto.vscode-diff-viewer"

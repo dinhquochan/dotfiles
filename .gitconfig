@@ -10,7 +10,7 @@
 [commit]
 	template = /Users/tee/.config/git/message
 [init]
-	defaultBranch = main
+	defaultBranch = develop
 [github]
 	user = dinhquochan
 [filter "lfs"]
