@@ -10,7 +10,7 @@
 [commit]
 	template = /Users/dinhquochan/.config/git/message
 [init]
-	defaultBranch = develop
+	defaultBranch = main
 [github]
 	user = dinhquochan
 [filter "lfs"]
