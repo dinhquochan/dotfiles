@@ -3,12 +3,12 @@
 	email = dqh@dinhquochan.com
 	signingkey = A8047D88AA07D798
 [core]
-	excludesfile = /Users/tee/.config/git/ignore
+	excludesfile = /Users/dinhquochan/.config/git/ignore
 	editor = vim
 	ignorecase = false
 	autocrlf = input
 [commit]
-	template = /Users/tee/.config/git/message
+	template = /Users/dinhquochan/.config/git/message
 [init]
 	defaultBranch = develop
 [github]
