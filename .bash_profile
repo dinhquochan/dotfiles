@@ -27,9 +27,9 @@ alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias weather='curl -s wttr.in/Ho_Chi_Minh | sed -n "1,7p"'
 
 alias c='clear'
-alias l='ls'
-alias ll='ls -l'
-alias la='ls -al'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 
 alias g='git'
 alias gti='git'
