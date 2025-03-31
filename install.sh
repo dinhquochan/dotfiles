@@ -25,7 +25,7 @@ mkdir -p $HOME/.config
 mkdir -p $HOME/.config/tmux
 mkdir -p $HOME/.config/git
 
-cp .zshrc $HOME
+cp .bash_profile $HOME
 cp .config/git/ignore $HOME/.config/git/ignore
 cp .config/git/message $HOME/.config/git/message
 cp .gitconfig $HOME

@@ -3,12 +3,12 @@
 	email = dqh@dinhquochan.com
 	signingkey = A8047D88AA07D798
 [core]
-	excludesfile = /Users/dinhquochan/.config/git/ignore
+	excludesfile = /Users/han/.config/git/ignore
 	editor = vim
 	ignorecase = false
 	autocrlf = input
 [commit]
-	template = /Users/dinhquochan/.config/git/message
+	template = /Users/han/.config/git/message
 [init]
 	defaultBranch = main
 [github]
@@ -18,3 +18,4 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+

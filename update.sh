@@ -3,7 +3,7 @@
 mkdir -p .config/tmux
 
 cp ~/.config/tmux/tmux.conf .config/tmux/tmux.conf
-cp ~/.zshrc .
+cp ~/.bash_profile .
 cp ~/.config/git/ignore .config/git/ignore
 cp ~/.config/git/message .config/git/message
 cp -R ~/.config/kitty .config/kitty
