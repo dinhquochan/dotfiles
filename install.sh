@@ -18,14 +18,12 @@ brew bundle
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash
 nvm install --lts
 
-# Install Oh-My-Zsh
-
 # Ensure ~/.config is exists
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/tmux
 mkdir -p $HOME/.config/git
 
-cp .bash_profile $HOME
+cp .zshrc $HOME
 cp .config/git/ignore $HOME/.config/git/ignore
 cp .config/git/message $HOME/.config/git/message
 cp .gitconfig $HOME
