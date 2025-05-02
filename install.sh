@@ -28,12 +28,14 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 mkdir -p $HOME/.config
 mkdir -p $HOME/.config/tmux
 mkdir -p $HOME/.config/git
+mkdir -p $HOME/.config/kitty
 
-cp .zshrc $HOME
-cp .config/git/ignore $HOME/.config/git/ignore
-cp .config/git/message $HOME/.config/git/message
-cp .gitconfig $HOME
-cp .config/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
+cp zshrc $HOME/.zshrc
+cp config/git/ignore $HOME/.config/git/ignore
+cp config/git/message $HOME/.config/git/message
+cp gitconfig $HOME/.gitconfig
+cp config/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
+cp -R config/kitty/* $HOME/.config/kitty/
 
 # For vim mode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
