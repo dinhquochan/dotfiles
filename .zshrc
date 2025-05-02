@@ -2,7 +2,11 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -20,7 +24,6 @@ export EDITOR='vim'
 # Paths
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin
-export PATH=$PATH:/Users/Shared/DBngin/mysql/8.0.33/bin
 
 # Aliases
 alias ezsh="vim $HOME/.zshrc"
@@ -28,21 +31,16 @@ alias rzsh="source $HOME/.zshrc"
 alias etmux="vim $HOME/.config/tmux/tmux.conf"
 
 alias start='tmux new-session -DAs main'
+alias vim=/opt/homebrew/bin/nvim
 
 alias reloaddns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
 alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias weather='curl -s wttr.in/Ho_Chi_Minh | sed -n "1,7p"'
 
 alias c='clear'
-alias l='ls'
-alias ll='ls -l'
-alias la='ls -al'
 
 alias g='git'
 alias gti='git'
-alias gp='git push'
-alias gpr='git pull --rebase'
-alias gpu='git pull'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias wip="git add . && git commit -m 'wip'"
 alias nah='git reset --hard; git clean -df'
@@ -50,7 +48,7 @@ alias nah='git reset --hard; git clean -df'
 alias art='php artisan'
 alias tinker='art tinker'
 alias phpunit='vendor/bin/phpunit'
-alias sail='sh $([ -f vendor/bin/sail ] && echo vendor/bin/sail || echo $HOME/.local/bin/sail)'
+alias sail='bash $([ -f vendor/bin/sail ] && echo vendor/bin/sail || echo $HOME/.local/bin/sail)'
 alias pint='vendor/bin/pint'
 alias phpstan='vendor/bin/phpstan'
 
@@ -78,3 +76,7 @@ fpath=(/Users/han/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+# Starship
+eval "$(starship init zsh)"
+
