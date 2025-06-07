@@ -1,0 +1,18 @@
+# Functions
+phpv() {
+    local version=$1
+
+    if [[ -z "$version" ]]; then
+        echo "Usage: phpv <version>"
+        return 1
+    fi
+
+    if command -v "php$version" &> /dev/null; then
+        sudo rm -rf /usr/bin/php
+        sudo ln -s "$(command -v "php$version")" /usr/bin/php
+        echo "Switched to PHP $version"
+    else
+        echo "PHP version $version not found."
+        return 1
+    fi
+}

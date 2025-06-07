@@ -17,7 +17,7 @@ brew "tmux"
 brew "tree"
 brew "wget"
 brew "wrk"
-brew "zsh"
+brew "bash"
 brew "shivammathur/php/php@8.2", link: true
 brew "shivammathur/php/php@8.3"
 cask "1password"

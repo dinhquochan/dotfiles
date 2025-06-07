@@ -18,27 +18,28 @@ brew bundle
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 nvm install --lts
 
-
-# Install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+# Install tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Ensure ~/.config is exists
 mkdir -p $HOME/.config
-mkdir -p $HOME/.config/tmux
 mkdir -p $HOME/.config/git
 mkdir -p $HOME/.config/kitty
 
-cp zshrc $HOME/.zshrc
+cp bash_profile $HOME/.bash_profile
+cp bashrc $HOME/.bashrc
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    cp bash_macos $HOME/.bash_macos
+else
+    cp bash_linux $HOME/.bash_linux
+fi
 cp config/git/ignore $HOME/.config/git/ignore
 cp config/git/message $HOME/.config/git/message
 cp gitconfig $HOME/.gitconfig
-cp config/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
+cp tmux.conf $HOME/.tmux.conf
 cp -R config/kitty/* $HOME/.config/kitty/
 
 # For vim mode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.phpstorm ApplePressAndHoldEnabled -bool false
 defaults write com.jetbrains.webstorm ApplePressAndHoldEnabled -bool false
-
