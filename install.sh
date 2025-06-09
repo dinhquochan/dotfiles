@@ -26,7 +26,6 @@ mkdir -p $HOME/.config
 mkdir -p $HOME/.config/git
 mkdir -p $HOME/.config/kitty
 
-cp bash_profile $HOME/.bash_profile
 cp bashrc $HOME/.bashrc
 if [[ "$OSTYPE" == "darwin"* ]]; then
     cp bash_macos $HOME/.bash_macos

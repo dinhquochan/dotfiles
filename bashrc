@@ -1,3 +1,9 @@
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
     . /etc/bashrc
@@ -35,7 +41,36 @@ export CODE_PATH=$HOME/Code
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/.composer/vendor/bin
 
-# Aliases
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias start='tmux new-session -DAs main'
 alias weather='curl -s wttr.in/Ho_Chi_Minh | sed -n "1,7p"'
 alias c='clear'
@@ -54,7 +89,6 @@ alias dc='docker compose'
 alias dce='dc exec'
 alias dcr='dc run'
 
-# Functions
 rmds() {
     find . -name '.DS_Store' -type f -delete
 }
@@ -67,3 +101,11 @@ fi
 if [ -f "$HOME/.bash_linux" ]; then
     source "$HOME/.bash_linux"
 fi
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Starship prompt
+eval "$(starship init bash)"
