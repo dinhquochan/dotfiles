@@ -14,6 +14,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew bundle
 
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 nvm install --lts
@@ -26,12 +31,13 @@ mkdir -p $HOME/.config
 mkdir -p $HOME/.config/git
 mkdir -p $HOME/.config/kitty
 
-cp bashrc $HOME/.bashrc
+cp zshrc $HOME/.zshrc
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    cp bash_macos $HOME/.bash_macos
+    cp zsh_macos $HOME/.zsh_macos
 else
-    cp bash_linux $HOME/.bash_linux
+    cp zsh_linux $HOME/.zsh_linux
 fi
+
 cp config/git/ignore $HOME/.config/git/ignore
 cp config/git/message $HOME/.config/git/message
 cp gitconfig $HOME/.gitconfig

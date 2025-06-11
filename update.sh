@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
-cp ~/.tmux.conf tmux.conf
-cp ~/.bash_profile bash_profile
-cp ~/.bashrc bashrc
+cp $HOME/.tmux.conf tmux.conf
 
-if [ -f ~/.bash_linux ]; then
-    cp ~/.bash_linux bash_linux
+cp $HOME/.zshrc zshrc
+
+if [ -f $HOME/.zsh_linux ]; then
+    cp $HOME/.zsh_linux zsh_linux
 fi
 
-if [ -f ~/.bash_macos ]; then
-    cp ~/.bash_macos bash_macos
+if [ -f $HOME/.zsh_macos ]; then
+    cp $HOME/.zsh_macos zsh_macos
 fi
 
-cp ~/.config/git/ignore config/git/ignore
-cp ~/.config/git/message config/git/message
-cp -R ~/.config/kitty/* config/kitty/
-cp ~/.gitconfig gitconfig
+cp $HOME/.config/git/ignore config/git/ignore
+cp $HOME/.config/git/message config/git/message
+cp -R $HOME/.config/kitty/* config/kitty/
+cp $HOME/.gitconfig gitconfig
 
 brew bundle dump --force

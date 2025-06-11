@@ -1,5 +1,5 @@
 # Replace default macos applications with alternatives
-alias vim=/opt/homebrew/bin/nvim
+alias vim=/opt/homebrew/bin/vim
 
 # Aliases
 alias reloaddns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
@@ -10,8 +10,3 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # LM Studio
 export PATH="$PATH:/Users/han/.lmstudio/bin"
-
-# Docker
-fpath=(/Users/han/.docker/completions $fpath)
-autoload -Uz compinit
-compinit

@@ -1,0 +1,18 @@
+phpv() {
+    local version=$1
+
+    if [[ -z "$version" ]]; then
+        echo "Usage: phpv <version>"
+        return 1
+    fi
+
+    if command -v "php$version" &> /dev/null; then
+        sudo update-alternatives --set php /usr/bin/php$version
+        sudo update-alternatives --set phpize /usr/bin/phpize$version
+        sudo update-alternatives --set php-config /usr/bin/php-config$version
+        echo "Switched to PHP $version"
+    else
+        echo "PHP version $version not found."
+        return 1
+    fi
+}
