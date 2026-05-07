@@ -1,5 +1,3 @@
-## git config --global core.excludesfile '~/.gitignore_global'
-
 .DS_Store
 .DS_Store?
 ._*
@@ -11,10 +9,6 @@
 .idea
 .fleet
 .vscode
-*.sublime-project
-*.sublime-workspace
-_ide_helper.php
-.phpstorm.meta.php
 
 node_modules
 npm-debug.log
@@ -22,3 +16,12 @@ yarn-error.log
 
 .phpunit-watcher-cache.php
 
+
+.claude/
+.opencode/
+.repomixignore
+claude/
+release-manifest.json
+
+
+**/.claude/settings.local.json
