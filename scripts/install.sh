@@ -64,4 +64,7 @@ defaults write -g NSSplitViewItemSidebarDefaultsToFloatingAppearance -bool false
 # Disable macOS smooth fonts
 defaults write -g AppleFontSmoothing -int 0
 
+# Enable key repeat in VSCodium (disable press-and-hold accent menu)
+defaults write com.vscodium ApplePressAndHoldEnabled -bool false
+
 echo "Done."
