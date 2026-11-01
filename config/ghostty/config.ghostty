@@ -1,0 +1,10 @@
+theme       = Apple System Colors Light 
+font-family = Monotional NF
+font-size   = 13
+
+window-padding-balance = true
+window-padding-x = 0
+window-padding-y = 0
+
+macos-titlebar-proxy-icon = hidden
+
