@@ -1,66 +1,93 @@
-tap "shivammathur/php"
-brew "awscli"
-brew "btop"
-brew "cmatrix"
-brew "libssh2"
+tap "shivammathur/php", trusted: true
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@4"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Programmable completion for Bash 4.2+
+brew "bash-completion@2"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Cross-platform make
+brew "cmake"
+# Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-brew "php", link: false
+# General-purpose scripting language
+brew "php"
+# Dependency Manager for PHP
 brew "composer"
-brew "container", link: false
-brew "fastfetch"
-brew "ffmpeg"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
 brew "gh"
-brew "ghostscript"
+# Distributed revision control system
 brew "git"
-brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
-brew "imagemagick"
+# Agent multiplexer that lives in your terminal
+brew "herdr"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Lazier way to manage everything docker
 brew "lazydocker"
-brew "php@8.2"
-brew "php@8.3", link: true
-brew "php@8.4"
-brew "pinentry-mac"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Utility for directing compilation
+brew "make"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# PHP Installer for Extensions
+brew "pie"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# Terminal multiplexer
 brew "tmux"
-brew "tree"
+# Extraction utility for .zip compressed archives
 brew "unzip"
+# Vi 'workalike' with many additional features
+brew "vim"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Internet file retriever
 brew "wget"
-brew "wimlib"
-brew "wrk"
+# Compression and file packaging/archive utility
 brew "zip"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# General-purpose scripting language
+brew "shivammathur/php/php"
+# General-purpose scripting language
+brew "shivammathur/php/php@8.4", trusted: true
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
-cask "antigravity"
-cask "chatgpt"
-cask "claude"
-cask "cleanmymac"
-cask "container"
-cask "cursor"
+# Screen capturing tool
+cask "cleanshot"
+# Database management tool
+cask "dbx"
+# App to build and share containerised applications and microservices
 cask "docker-desktop"
-cask "font-geist"
-cask "font-geist-mono"
-cask "font-google-sans-code"
-cask "font-inter"
+# Web browser
+cask "firefox"
+cask "font-cascadia-code"
 cask "font-jetbrains-mono"
-cask "font-saira"
-cask "font-saira-condensed"
-cask "font-saira-extra-condensed"
-cask "font-source-code-pro"
-cask "github"
-cask "google-chrome"
-cask "google-drive"
-cask "google-gemini"
-cask "insomnia"
-cask "kitty"
-cask "libreoffice"
-cask "localsend"
-cask "microsoft-edge"
-cask "navicat-premium-lite"
-cask "postman"
+cask "font-monaspace"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Vietnamese input method engine
+cask "gonhanh"
+# Team communication and collaboration software
 cask "slack"
-cask "transmission"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Binary releases of VS Code without MS branding/telemetry/licensing
+cask "vscodium"
+# Messaging and calling application
 cask "zalo"
-vscode "anthropic.claude-code"
 vscode "bmewburn.vscode-intelephense-client"
 vscode "bradlc.vscode-tailwindcss"
 vscode "dbaeumer.vscode-eslint"
@@ -72,15 +99,5 @@ vscode "golang.go"
 vscode "laravel.vscode-laravel"
 vscode "mehedidracula.php-namespace-resolver"
 vscode "mrmlnc.vscode-duplicate"
-vscode "ms-azuretools.vscode-containers"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode.remote-explorer"
-vscode "patbenatar.advanced-new-file"
-vscode "rebornix.toggle"
 vscode "redhat.vscode-yaml"
-vscode "streetsidesoftware.code-spell-checker"
-vscode "streetsidesoftware.code-spell-checker-vietnamese"
 vscode "vue.volar"
-vscode "xdebug.php-debug"
