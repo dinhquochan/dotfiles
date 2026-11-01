@@ -34,7 +34,7 @@ case $- in
 esac
 
 # prompt
-export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+export PS1='\W \$ '
 
 # variables
 export LC_ALL=en_US.UTF-8
@@ -105,11 +105,7 @@ if [[ -r /opt/homebrew/etc/profile.d/bash_completion.sh ]]; then
     source /opt/homebrew/etc/profile.d/bash_completion.sh
 fi
 
-# git: branch in the prompt and completion for the `g` alias
-if declare -F __git_ps1 >/dev/null; then
-  GIT_PS1_SHOWDIRTYSTATE=1
-  PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[35m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ '
-fi
+# git: completion for the `g` alias
 if declare -F __git_complete >/dev/null; then
   __git_complete g __git_main
 fi
