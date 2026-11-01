@@ -2,7 +2,7 @@
 	name = Dinh Quoc Han
 	email = dqh@dinhquochan.com
 [core]
-	excludesfile = /Users/han/.config/git/ignore
+	excludesfile = ~/.gitignore_global
 	editor = vim
 	ignorecase = false
 	autocrlf = input
