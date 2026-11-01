@@ -1,0 +1,100 @@
+" Plugin-free vimrc for quick editing. Light colours, no line numbers.
+
+" ---- Basics -------------------------------------------------------------
+set nocompatible
+filetype plugin indent on
+syntax on
+set encoding=utf-8
+set hidden                      " switch buffers without saving first
+set autoread                    " pick up changes made outside vim
+set backspace=indent,eol,start
+set mouse=a
+set clipboard=unnamed           " yank/paste with the macOS clipboard
+set ttimeout ttimeoutlen=10     " no lag after <Esc>
+set updatetime=300
+set scrolloff=5 sidescrolloff=5
+set linebreak                   " wrap long lines at word boundaries
+set showcmd
+set wildmenu wildmode=longest:full,full wildoptions=pum
+set path+=**                    " :find searches the project tree
+set splitbelow splitright
+set belloff=all
+set shortmess+=I                " no intro screen
+
+" ---- Search -------------------------------------------------------------
+set incsearch hlsearch
+set ignorecase smartcase
+
+" ---- Indentation --------------------------------------------------------
+set expandtab tabstop=4 shiftwidth=4 softtabstop=4
+set autoindent smarttab shiftround
+
+augroup indent_by_filetype
+  autocmd!
+  autocmd FileType yaml,json,javascript,typescript,vue,html,css,scss,lua setlocal shiftwidth=2 softtabstop=2
+  autocmd FileType go,make setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=0
+augroup END
+
+" ---- Files: no swap litter, undo survives restarts -------------------------
+set noswapfile nobackup nowritebackup
+if !isdirectory($HOME . '/.vim/undo')
+  call mkdir($HOME . '/.vim/undo', 'p', 0700)
+endif
+set undofile undodir=~/.vim/undo//
+
+" Reopen files at the last cursor position
+augroup restore_cursor
+  autocmd!
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line('$') && &ft !~# 'commit' | exe 'normal! g`"' | endif
+augroup END
+
+" ---- Look ---------------------------------------------------------------
+set background=light
+silent! colorscheme lunaperche
+set laststatus=2
+set list listchars=tab:»\ ,trail:·,nbsp:␣
+
+" Bar cursor in insert mode, underline in replace mode (Ghostty, tmux)
+let &t_SI = "\e[6 q"
+let &t_SR = "\e[4 q"
+let &t_EI = "\e[2 q"
+
+" ---- Built-in packages ----------------------------------------------------
+packadd! comment                " gcc / gc{motion} toggles comments
+packadd! matchit                " % jumps between if/else/end, tags, ...
+packadd! editorconfig           " respect a project's .editorconfig
+
+" ---- Keys ---------------------------------------------------------------
+let mapleader = ' '
+
+nnoremap <leader>w :write<CR>
+nnoremap <leader>q :quit<CR>
+nnoremap <leader>f :find<Space>
+nnoremap <leader>b :ls<CR>:buffer<Space>
+nnoremap <leader>e :Explore<CR>
+nnoremap <silent> <leader><Space> :nohlsearch<CR>
+
+" Move by screen line when no count is given
+nnoremap <expr> j v:count ? 'j' : 'gj'
+nnoremap <expr> k v:count ? 'k' : 'gk'
+
+" Y yanks to end of line, like D and C
+nnoremap Y y$
+
+" Keep the selection when indenting
+xnoremap < <gv
+xnoremap > >gv
+
+" Move selected lines up and down
+xnoremap J :move '>+1<CR>gv=gv
+xnoremap K :move '<-2<CR>gv=gv
+
+" Jump between splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" netrw: no banner, tree view
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
