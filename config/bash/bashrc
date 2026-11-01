@@ -1,0 +1,125 @@
+# load paths (kept above the interactive check so `bash -lc` gets them too)
+PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
+PATH="$HOME/.docker/bin:$PATH"
+PATH="$HOME/.composer/vendor/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+PATH="$PNPM_HOME/bin:$PATH"
+
+# opencode
+PATH="$HOME/.opencode/bin:$PATH"
+
+# DBngin database clients (every installed engine/version, lowest priority)
+for _dir in /Users/Shared/DBngin/*/*/bin; do
+  [ -d "$_dir" ] && PATH="$PATH:$_dir"
+done
+
+# drop duplicate PATH entries from nested shells, keeping the first one
+_path=""
+IFS=: read -ra _dirs <<< "$PATH"
+for _dir in "${_dirs[@]}"; do
+  case ":$_path:" in
+    *":$_dir:"*) ;;
+    *) _path="${_path:+$_path:}$_dir" ;;
+  esac
+done
+export PATH="$_path"
+unset _path _dirs _dir
+
+# If not running interactively, don't do anything else
+case $- in
+    *i*) ;;
+      *) return ;;
+esac
+
+# prompt
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+# variables
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export CLICOLOR=1
+export PAGER="less"
+export LESS="-R"
+
+# better history
+HISTSIZE=50000
+HISTFILESIZE=50000
+HISTCONTROL=ignoreboth:erasedups
+HISTTIMEFORMAT="%F %T "
+PROMPT_COMMAND="history -a${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
+
+shopt -s histappend
+shopt -s checkwinsize
+shopt -s cmdhist
+shopt -s lithist
+
+# shell options
+shopt -s cdspell
+# bash 4+ only; stay quiet if macOS /bin/bash 3.2 reads this file
+shopt -s autocd dirspell globstar checkjobs 2>/dev/null
+
+# editor
+export EDITOR="vim"
+export VISUAL="$EDITOR"
+
+# gpg
+export GPG_TTY=$(tty)
+
+# aliases
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias reloaddns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
+alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
+alias start="tmux new-session -DAs main"
+alias weather='curl -s wttr.in/Ho_Chi_Minh | sed -n "1,7p"'
+alias c="clear"
+
+alias ls="ls --color=auto"
+alias l="ls"
+alias ll="ls -l"
+alias la="ll -a"
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
+rmds() {
+    find . -name ".DS_Store" -type f -delete
+}
+
+alias d="docker"
+alias dc="docker compose"
+alias dce="docker compose exec"
+alias dcr="docker compose run"
+
+alias g="git"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias wip="git add . && git commit -m 'wip [skip ci]'"
+alias nah="git reset --hard; git clean -df"
+
+alias superclaude="claude --dangerously-skip-permissions"
+
+# bash_completion (also loads /opt/homebrew/etc/bash_completion.d)
+if [[ -r /opt/homebrew/etc/profile.d/bash_completion.sh ]]; then
+    source /opt/homebrew/etc/profile.d/bash_completion.sh
+fi
+
+# git: branch in the prompt and completion for the `g` alias
+if declare -F __git_ps1 >/dev/null; then
+  GIT_PS1_SHOWDIRTYSTATE=1
+  PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[35m\]$(__git_ps1 " (%s)")\[\033[00m\]\$ '
+fi
+if declare -F __git_complete >/dev/null; then
+  __git_complete g __git_main
+fi
+
+# zoxide
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init bash)"
+fi
+
+# fzf
+if command -v fzf >/dev/null 2>&1; then
+  eval "$(fzf --bash)"
+fi

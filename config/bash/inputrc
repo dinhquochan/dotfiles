@@ -1,0 +1,14 @@
+# Readline settings for bash
+
+# Tab completion
+set completion-ignore-case on
+set show-all-if-ambiguous on
+set mark-symlinked-directories on
+set colored-stats on
+set colored-completion-prefix on
+
+set bell-style none
+
+# Up/Down search history for commands starting with what is typed
+"\e[A": history-search-backward
+"\e[B": history-search-forward
