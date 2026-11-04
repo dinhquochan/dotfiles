@@ -71,15 +71,24 @@ cask "cleanshot"
 cask "dbx"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
+# Collaborative team software
+cask "figma"
 # Web browser
 cask "firefox"
 cask "font-cascadia-code"
+cask "font-geist"
+cask "font-geist-mono"
+cask "font-geist-serif"
 cask "font-jetbrains-mono"
 cask "font-monaspace"
+cask "font-sf-mono"
+cask "font-sf-pro"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Vietnamese input method engine
 cask "gonhanh"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
 # Team communication and collaboration software
 cask "slack"
 # Messaging app with a focus on speed and security
@@ -100,4 +109,5 @@ vscode "laravel.vscode-laravel"
 vscode "mehedidracula.php-namespace-resolver"
 vscode "mrmlnc.vscode-duplicate"
 vscode "redhat.vscode-yaml"
+vscode "vscodevim.vim"
 vscode "vue.volar"
