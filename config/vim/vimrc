@@ -1,4 +1,4 @@
-" Plugin-free vimrc for quick editing. Light colours, no line numbers.
+" Plugin-free vimrc for quick editing. Dark colours, no line numbers.
 
 " ---- Basics -------------------------------------------------------------
 set nocompatible
@@ -49,7 +49,7 @@ augroup restore_cursor
 augroup END
 
 " ---- Look ---------------------------------------------------------------
-set background=light
+set background=dark
 silent! colorscheme lunaperche
 set laststatus=2
 set list listchars=tab:»\ ,trail:·,nbsp:␣

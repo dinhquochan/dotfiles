@@ -1,5 +1,7 @@
-theme       = Apple System Colors Light 
-font-family = Monotional NF
+theme       = Apple System Colors 
+# font-family = Monotional NF
+font-family = SF Mono
+font-style  = Medium
 font-size   = 13
 
 window-padding-balance = true
