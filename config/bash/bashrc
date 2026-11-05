@@ -1,6 +1,5 @@
 # load paths (kept above the interactive check so `bash -lc` gets them too)
 PATH="$HOME/.bin:$HOME/.local/bin:$PATH"
-PATH="$HOME/.docker/bin:$PATH"
 PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # pnpm
@@ -10,10 +9,9 @@ PATH="$PNPM_HOME/bin:$PATH"
 # opencode
 PATH="$HOME/.opencode/bin:$PATH"
 
-# DBngin database clients (every installed engine/version, lowest priority)
-for _dir in /Users/Shared/DBngin/*/*/bin; do
-  [ -d "$_dir" ] && PATH="$PATH:$_dir"
-done
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/han/.docker/bin"
+# End of Docker Desktop section.
 
 # drop duplicate PATH entries from nested shells, keeping the first one
 _path=""

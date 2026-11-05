@@ -49,7 +49,7 @@ augroup restore_cursor
 augroup END
 
 " ---- Look ---------------------------------------------------------------
-set background=dark
+set background=light
 silent! colorscheme lunaperche
 set laststatus=2
 set list listchars=tab:»\ ,trail:·,nbsp:␣
